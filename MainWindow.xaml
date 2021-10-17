@@ -48,7 +48,8 @@
                     <MenuItem x:Name="pepPizzaMenuItem" Header="Pepperoni Pizza"/>
                     <MenuItem x:Name="vegPizzaMenuItem" Header="Veggie Pizza"/>
                     <MenuItem x:Name="quatPizzaMenuItem" Header="Quattro Stagioni Pizza"/>
-                    <MenuItem x:Name="canPizzaMenuItem" Header="Canibale Pizza"/>                </MenuItem>
+                    <MenuItem x:Name="canPizzaMenuItem" Header="Canibale Pizza"/>
+                </MenuItem>
                 <MenuItem Header="Stop"/>
             </MenuItem>
         </Menu>
