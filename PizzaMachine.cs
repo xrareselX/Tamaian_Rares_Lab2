@@ -8,7 +8,7 @@ using System.Windows.Threading;
 
 namespace Tamaian_Rares_Lab2
 {
-    class PizzaMachine : Component
+    class PizzaMachine : Component //sintax for inheritance. noi nu putem asocia evenimente unei clase daca nu e componenta a aplicatiei
     {
 
         private PizzaType mIngredients;
@@ -28,7 +28,7 @@ namespace Tamaian_Rares_Lab2
             }
         }
         private System.Collections.ArrayList mPizzas = new System.Collections.ArrayList();
-        public Pizza this[int Index]
+        public Pizza this[int Index] // index concept.. cand vrem ca o colectie de tip lista inlantuita sa fie accesata ca un array
         {
             get
             {
@@ -39,8 +39,8 @@ namespace Tamaian_Rares_Lab2
                 mPizzas[Index] = value;
             }
         }
-        public delegate void DoughnutCompleteDelegate();
-        public event DoughnutCompleteDelegate DoughnutComplete;
+        public delegate void PizzaCompleteDelegate(); //creating a custom event aka function pointer imi tine minte fct ce trebuie apelata cand un eveniment e raised pe formular cand e gata o pizza sa fie declarat si sa se tina evidenta
+        public event PizzaCompleteDelegate PizzaComplete;
         DispatcherTimer pizzaBakeTimer;
         private void InitializeComponent()
         {
@@ -81,7 +81,7 @@ namespace Tamaian_Rares_Lab2
             pizzaBakeTimer.Start();
         }
 
-    }// end PizzaMachine class
+    }// end PizzaMachine class aka cuptorul
     enum PizzaType
     {
         Margherita,
@@ -90,10 +90,10 @@ namespace Tamaian_Rares_Lab2
         Quattro_Stagioni,
         Canibale
     }
-    class Pizza
+    class Pizza  //pizza propriu-zisa
     {
-        private PizzaType mIngredients; // câmp
-        public PizzaType Ingredients // proprietate
+        private PizzaType mIngredients; // câmp, privat avem nev de get and set
+        public PizzaType Ingredients // proprietate avem nev de ea ca sa accesam campul de mai sus
         {
             get //metoda get
             {
