@@ -72,11 +72,21 @@ namespace Tamaian_Rares_Lab2
             Ingredients = dIngredients;
             switch (Ingredients)
             {
-                case PizzaType.Canibale: Interval = 3; break;
-                case PizzaType.Margherita: Interval = 2; break;
-                case PizzaType.Pepperoni: Interval = 5; break;
-                case PizzaType.Quattro_Stagioni: Interval = 7; break;
-                case PizzaType.Veggie: Interval = 4; break;
+                case PizzaType.Canibale: 
+                    Interval = 3;
+                    break;
+                case PizzaType.Margherita: 
+                    Interval = 2; 
+                    break;
+                case PizzaType.Pepperoni: 
+                    Interval = 5; 
+                    break;
+                case PizzaType.Quattro_Stagioni: 
+                    Interval = 7; 
+                    break;
+                case PizzaType.Veggie: 
+                    Interval = 4; 
+                    break;
             }
             pizzaBakeTimer.Start();
         }
